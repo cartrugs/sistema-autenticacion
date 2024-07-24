@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ __('Dashboard') }}</title>
-    @vite('resources/css/app.css') <!-- Incluye el CSS de Bootstrap -->
-    
+    <title>Dashboard</title>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
-            <!-- Barra de Navegación Lateral -->
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 sidebar">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
                 <div class="position-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
@@ -33,28 +31,15 @@
                 </div>
             </nav>
 
-            <!-- Contenido Principal -->
-            <main class="col-md-9 col-lg-10">
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">{{ __('Dashboard') }}</h1>
+                    <h1 class="h2">Dashboard</h1>
                 </div>
-                <div class="py-12 content">
-                    <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                        <div class="p-6 bg-white border-b border-gray-200">
-                            <div class="mt-8 text-2xl">
-                                Bienvenido a la Aplicación de Gestión
-                            </div>
-
-                            <div class="mt-6 text-gray-500">
-                                Utiliza el menú de navegación para gestionar maquinaria, parcelas y acciones.
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <p>Bienvenido al Dashboard</p>
             </main>
         </div>
     </div>
 
-    @vite('resources/js/app.js') <!-- Incluye el JS de Bootstrap -->
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
